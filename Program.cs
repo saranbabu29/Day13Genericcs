@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using GenericExample;
 
 namespace GenericsExample
 {
@@ -7,13 +7,10 @@ namespace GenericsExample
     {
         static void Main(string[] args)
         {
-            int[] Array1 = new int[] { 1, 2, 3, 4, 5, 6 };
-            double[] Array2 = { 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 };
-            char[] Array3 = new char[] { 's', 'h', 'a', 'r', 'a', 'n' };
+            int[] Array = new int[] { 100, 254, 935, 414, 567, 760 };
 
-            Program.toPrint<int>(Array1);
-            Program.toPrint<double>(Array2);
-            Program.toPrint<Char>(Array3);
+            GenericMaximum<int> generic = new GenericMaximum<int>(Array);
+            generic.PrintMaxValue();
 
         }
         public static void toPrint<T>(T[] inputArray1)
